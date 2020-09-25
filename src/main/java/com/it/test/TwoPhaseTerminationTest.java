@@ -1,7 +1,9 @@
 package com.it.test;
 
-public class TwoPhaseTerminationTest {
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j(topic = "c.Test")
+public class TwoPhaseTerminationTest {
     public static void main(String[] args) throws InterruptedException {
         TwoPhaseTermination tpt = new TwoPhaseTermination();
         tpt.start();
