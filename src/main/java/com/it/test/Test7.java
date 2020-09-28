@@ -6,8 +6,13 @@ package com.it.test;
  * @description
  */
 public class Test7 {
-    public static void test1() {
-        int i = 10;
-        i++;
+
+    static final Object lock = new Object();
+    static int counter = 0;
+
+    public static void main(String[] args) {
+        synchronized (lock) {
+            counter++;
+        }
     }
 }
