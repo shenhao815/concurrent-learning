@@ -1,7 +1,6 @@
 package com.it.test;
 
-import com.it.common.ThreadUtil;
-import javafx.scene.layout.BorderImage;
+import com.it.common.Sleeper;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -36,7 +35,7 @@ public class WaitTest {
                 }
             },"其它人").start();
         }
-        ThreadUtil.sleep(1000);
+        Sleeper.sleep(1000);
         new Thread(() -> {
             synchronized (room) {
                 hasCigarette = true;

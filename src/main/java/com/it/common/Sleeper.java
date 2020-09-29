@@ -1,6 +1,6 @@
 package com.it.common;
 
-public class ThreadUtil {
+public class Sleeper {
 
     public static void sleep(long n){
         try {

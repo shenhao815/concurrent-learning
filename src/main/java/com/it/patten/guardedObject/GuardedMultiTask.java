@@ -1,6 +1,6 @@
 package com.it.patten.guardedObject;
 
-import com.it.common.ThreadUtil;
+import com.it.common.Sleeper;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Hashtable;
@@ -19,7 +19,7 @@ public class GuardedMultiTask {
         for (int i = 0; i < 3; i++) {
             new People().start();
         }
-        ThreadUtil.sleep(1000);
+        Sleeper.sleep(1000);
         for (Integer id : Futures.getIds()) {
             new Postman(id,"内容"+id).start();
         }

@@ -1,6 +1,6 @@
 package com.it.patten.guardedObject;
 
-import com.it.common.ThreadUtil;
+import com.it.common.Sleeper;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
@@ -27,9 +27,9 @@ public class GuardedSingle {
 
         GuardedObject guardedObject = new GuardedObject();
         new Thread(() -> {
-            ThreadUtil.sleep(1000);
+            Sleeper.sleep(1000);
             guardedObject.complete(null);
-            ThreadUtil.sleep(1000);
+            Sleeper.sleep(1000);
             guardedObject.complete(Arrays.asList("a","b","c"));
         },"下载任务").start();
 

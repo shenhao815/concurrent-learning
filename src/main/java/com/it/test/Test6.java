@@ -1,6 +1,6 @@
 package com.it.test;
 
-import static com.it.common.ThreadUtil.sleep;
+import static com.it.common.Sleeper.sleep;
 
 public class Test6 {
 

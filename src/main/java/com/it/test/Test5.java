@@ -2,7 +2,7 @@ package com.it.test;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static com.it.common.ThreadUtil.sleep;
+import static com.it.common.Sleeper.sleep;
 
 
 @Slf4j
